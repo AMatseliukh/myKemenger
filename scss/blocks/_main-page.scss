@@ -1,0 +1,99 @@
+.main-page {
+  position: relative;
+  margin-bottom: calc(50px + (127 - 50) * ((100vw - 767px) / (1260 - 767)));
+}
+.main-page__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../../images/bg-main-page.jpg);
+  background-repeat: no-repeat;
+  background-position-x: calc(0px + (88 - 0) * ((100vw - 1260px) / (1440 - 1260)));
+  background-size: contain;
+}
+.main-page__content {
+  padding-left: 35px;
+  padding-top: calc(150px + (239 - 150) * ((100vw - 767px) / (1260 - 767)));
+  padding-bottom: calc(150px + (200 - 150) * ((100vw - 767px) / (1260 - 767)));
+  margin-left: calc(0px + (88 - 0) * ((100vw - 1260px) / (1440 - 1260)));
+  max-width: 720px;
+  align-self: flex-end;
+  padding-bottom: calc(150px + (206 - 150) * ((100vw - 767px) / (1260 - 767)));
+}
+.main-page__title {
+  text-transform: uppercase;
+  color: $accent;
+  margin-bottom: 44px;
+  span{
+    font-weight: 500;
+    font-size: calc(32px + (48 - 32) * ((100vw - 767px) / (1260 - 767)));
+    color: $text-color;
+    text-transform: lowercase;
+  }
+}
+.main-page__descr {
+  margin-bottom: 44px;
+  p{
+    max-width: 532px;
+  }
+}
+.main-page__btn {
+  padding: 20px 44px;
+  background-color: #FAE01A;
+  box-shadow: 0px 20px 40px -27px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  &:hover{
+    background-color: $accent;
+  }
+}
+.main-page__img {
+  background: url(../../images/bg-student.svg) no-repeat;
+  background-size: cover;
+  flex: 0 0 40%;
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 1260px) {
+  .main-page__wrapper{
+    background-position-x: 0;
+  }
+  .main-page__content{
+    margin-left: calc(15px + (35 - 15) * ((100vw - 992px) / (1260 - 992)));
+    padding-left: 0;
+  }
+}
+@media (max-width: 992px) {
+  .main-page__content{
+    margin-left: 15px;
+  }
+  .main-page__img{
+    align-self: start;
+  }
+  
+}
+
+@media (max-width: 767px) {
+  .main-page{
+    margin-bottom: 50px;
+  }
+  .main-page__content{
+    padding-bottom: 50px;
+  }
+  .main-page__title span{
+    font-size: 32px;
+  }
+  .main-page__img{
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .main-page__title{
+    font-size: 28px;
+    span{
+      font-size: 24px;
+    }
+  }
+}

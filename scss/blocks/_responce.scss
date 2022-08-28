@@ -1,0 +1,111 @@
+.responce{
+  text-align: center;
+  margin-bottom: 71px;
+  position: relative;
+}
+.responce__title {
+  margin-bottom: 60px;
+}
+.responce-slider__wrapper {
+  display: flex;
+  min-width: 0px;
+}
+.responce-slide{
+  text-align: center;
+  height: 100%;
+}
+.responce-slide__block{
+  width: 387px;
+  min-height: 300px;
+  border: 4px solid $accent;
+  border-radius: 30px;
+  padding: 36px 24px;
+  margin: 0 auto;
+}
+.responce-slide__user{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  margin-bottom: 12px;
+}
+.responce-slide__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+}
+.responce-slide__nik {
+  font-weight: 600;
+}
+.responce-slide__descr {
+  text-align: left;
+  max-width: 327px;
+  font-size: calc(16px + (18 - 16) * ((100vw - 767px) / (1260 - 767)));
+  line-height: 1.2;
+}
+.responce-slider__controls{
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  left: 0;
+  bottom: 0;
+}
+.responce-slider__arrow{
+  background-color: transparent;
+}
+.responce-slider__arrow.swiper-button-next::after,
+.responce-slider__arrow.swiper-button-prev::after {
+  display: none;
+}
+.swiper-button-next {
+  transform: rotate(180deg);
+}
+.responce-slider__controls .swiper-pagination{
+  display: none;
+}
+.responce-slider__controls .swiper-pagination-bullet-active {
+  background-color: $accent;
+}
+
+@media (max-width: 1300px) {
+  .responce-slide__block{
+    width: calc(310px + (387 - 310) * ((100vw - 992px) / (1300 - 992)));
+  }
+}
+@media (max-width: 991px) {
+  .responce{
+    padding-bottom: 30px;
+  }
+  .responce-slide__block{
+    width: 350px;
+    min-height: 284px;
+  }
+  .responce-slide__descr {
+    font-size: 18px;
+  }
+  .responce{
+    margin-bottom: 41px;
+  }
+  .responce-slider__controls {
+    .swiper-pagination{
+      display: block;
+      bottom: 0;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .responce__title {
+    margin-bottom: 40px;
+  }
+  .responce-slide__block{
+    padding: 30px 20px;
+  }
+  .responce-slider__arrow{
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .responce-slide__block{
+    width: calc(290px + (350 - 290) * ((100vw - 320px) / (480 - 320)));
+  }
+}

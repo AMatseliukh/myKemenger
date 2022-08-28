@@ -1,0 +1,74 @@
+.sert {
+  margin-bottom: 115px;
+  position: relative;
+}
+.sert__elem1{
+  position: absolute;
+  background-image: url(../../images/sert/sert-elem1.jpg);
+  left: 0;
+  top: 0;
+  height: 440px;
+  width: 310px;
+}
+.sert__elem2{
+  position: absolute;
+  background-image: url(../../images/sert/sert-elem2.svg);
+  right: 6.25%;
+  bottom: -6%;
+  width: 137px;
+  height: 136px;
+}
+.sert__container {
+  text-align: center;
+  z-index: 5;
+  position: relative;
+}
+.sert__title {
+  margin-bottom: 60px;
+}
+.sert__block {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.sert__img {
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+  &:last-child{
+    position: relative;
+    z-index: 5;
+    &::before{
+      content: "";
+      position: absolute;
+      background-image: url(../../images/sert/sert-elem2.svg);
+      right: -10%;
+      bottom: -18%;
+      width: 137px;
+      height: 136px;
+      z-index: -1;
+    }
+  }
+}
+
+@media (max-width: 1260px) {
+  .sert__img:last-child::before{
+    right: calc((-6%) + ((-10) - (-6)) * ((100vw - 992px) / (1260 - 992)));
+  }
+}
+@media (max-width: 992px) {
+  .sert {
+    margin-bottom: 60px;
+  }
+  .sert__title{
+    margin-bottom: 40px;
+  }
+  .sert__block{
+    flex-wrap: wrap;
+  }
+  .sert__img:last-child::before{
+    right: -6%;
+
+  }
+}

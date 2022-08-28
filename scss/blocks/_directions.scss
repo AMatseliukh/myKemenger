@@ -1,0 +1,124 @@
+.direction {
+  margin-bottom: 60px;
+}
+.direction__container {
+  text-align: center;
+}
+.direction__inner{
+  margin: 0 auto;
+  max-width: 996px;
+  height: 719px;
+  position: relative;
+}
+.direction__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 76px;
+}
+.direction__img {
+  max-width: 32.5%;
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.direction__text {
+  margin: 0 auto;
+  P{
+    width: 380px;
+  }
+}
+.direction__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  max-width: 160px;
+  height: auto;
+}
+.direction__item-1{
+  top: 0;
+  left: 10%;
+}
+.direction__item-2{
+  top: 2%;
+  right: 10%;
+}
+.direction__item-3{
+  left: 0;
+  top: 29%;
+}
+.direction__item-4{
+  top: 26.8%;
+  right: 0;
+}
+.direction__item-5{
+  left: 10.2%;
+  bottom: 17%;
+}
+.direction__item-6{
+  right: 11.6%;
+  bottom: 17%;
+}
+.direction__item-7{
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.direction__icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 4px;
+}
+.direction__descr {
+  max-width: 160px;
+}
+
+@media (max-width: 992px) {
+  .direction__content{
+    padding-top: calc(140px + (76 - 140) * ((100vw - 767px) / (992 - 767)));
+  }
+  .direction__text p{
+    width: calc(300px + (380 - 300) * ((100vw - 767px) / (992 - 767)));
+  }
+}
+@media (max-width: 767px) {
+  .direction{
+    margin-bottom: 30px;
+  }
+  .direction__inner{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  .direction__content{
+    padding-top: 0;
+    margin-bottom: 30px;
+    width: 100%;
+    order: -1;
+  }
+  .direction__img{
+    max-width: 323px;
+    margin-bottom: 20px;
+  }
+  .direction__text p{
+    width: 250px;
+  }
+  .direction__item{
+    position: relative;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    width: 200px;
+    max-width: none;
+    margin-bottom: 30px;
+  }
+  .direction__item-7{
+    transform: none;
+    order: -1;
+  }
+}

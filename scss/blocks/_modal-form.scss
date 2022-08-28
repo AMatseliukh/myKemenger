@@ -1,0 +1,130 @@
+.modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(229, 229, 229, 0.8);
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 50;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: all;
+  transition: all 0.8s;
+}
+.modal.open{
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+}
+.modal__body {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  color: $text-color;
+  padding: 30px 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: all 0.8s;
+}
+.modal__content{
+  max-width: 400px;
+  background-color: #f6faff;
+  color: $text-color;
+  text-align: center;
+  padding: 20px 32px 32px;
+  border-radius: 30px;
+  position: relative;
+  margin: auto;
+  opacity: 0;
+  transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+  transition: all 0.8s;
+}
+.modal.open .modal__content {
+  transform: translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
+}
+.modal__title {
+  font-weight: 500;
+  text-align: center;
+  margin: 0 auto 32px;
+  width: 205px;
+  span{
+    color: $accent;
+  }
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal-form__input, .modal-form__textatea {
+  padding: 15px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0px 20px 45px -15px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  margin-bottom: 12px;
+  border: none; 
+  &::placeholder{
+    font-size: 18px;
+    font-weight: 300;
+    color: #C2C2C2
+  }
+  &:focus{
+    outline: none;
+    border: 1px solid rgba(3, 163, 166, 0.5);
+  }
+}
+.modal-form__textatea {
+  margin-bottom: 32px;
+}
+.modal-form__btn {
+  background: #FAE01A;
+  box-shadow: 0px 20px 40px -27px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  padding: 20px 40px;
+  &:hover{
+    background: $accent;
+  }
+}
+.modal__close{
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 15px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  opacity: 0.7;
+  &:hover{
+    color: $accent;
+    opacity: 1;
+  }
+}
+
+// -------------- modal-success
+
+.modal-success__img {
+  margin-top: 60px;
+  margin-bottom: 16px;
+}
+.modal-success__descr {
+  margin-bottom: 80px;
+  p{
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 36px;
+    span{
+      color: $accent;
+    }
+  }
+}
